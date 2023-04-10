@@ -1,0 +1,43 @@
+NOTAS:Para ejecutar comando en Git
+#-------------------------------------------------------
+Git es un software controlador de versiones
+Se usan las ramas cuando hay avrios usuarios
+
+#-------------------------------------------------------
+Visual studio code es un entorno de desarrollo para muchos lenguajes
+#-------------------------------------------------------
+#-------------------------------------------------------
+#-------------------------------------------------------
+                         Creando repositorio
+
+git init (una unica vez para empezar el proyecto / crea area de ensayo de forma temporal y el repositori local)
+
+git add (para hacer seguimiento a los archivos del directorio de trabajo (se va al area de ensayo))
+
+git commit (pasa al repositorio local, aca se crean los respaldos)
+
+git status -s (para verificar el estatus del repo)
+
+git commit -m "descripcion del commit"
+
+git log --online (para mostrar los commite realizados)
+
+git commit -am "descricpion" (realiza el git add y git commit en uno solo)
+#-------------------------------------------------------
+
+Una vez creado el repositorio en local, hay que subirlo a la nube, para lo cual se usa 
+
+git  remote add origin https://www.......com (se agrega el link del repositorio)
+
+Depués de introducir el comando con la dirección de vuestro repositorio y no os salga el recuadro de iniciar sesión: 
+colocad, depues de ejecutar el comando que muestra Juan, lo siguiente :   
+$ git push origin master
+
+#-------------------------------------------------------
+#-------------------------------------------------------
+#-------------------------------------------------------
+                         Clonacion y Tags
+si se abre el Index en Github, se puede editar el archivo directamente
+branch=ramas
+push para enviar info
+pull para traer info
