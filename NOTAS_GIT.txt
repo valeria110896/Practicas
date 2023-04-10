@@ -44,4 +44,6 @@ pull para traer info de remoto a local
 
 
 git pull (y se agrega la info)
-holi
+cuando me pone error usar
+git pull origin master
+git push --set-upstream origin master
