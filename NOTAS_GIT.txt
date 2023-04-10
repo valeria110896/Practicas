@@ -40,4 +40,4 @@ $ git push origin master
 si se abre el Index en Github, se puede editar el archivo directamente
 branch=ramas
 push para enviar info
-pull para traer info
+pull para traer info de remoto a local
