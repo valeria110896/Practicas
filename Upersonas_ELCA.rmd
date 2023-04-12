@@ -1,0 +1,248 @@
+---
+title: "Proyecto ELCA Datos UPersonas"
+output: statsr:::statswithr_lab
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r Borrado elementos espacio de trabajo , include=FALSE}
+# Borrar los objetos en el espacio de trabajo
+rm(list=ls())
+#ls()
+```
+
+
+Una vez que el paquete "haven" está cargado, se puede utilizar la función "read_dta()" para leer el archivo .dta. 
+```{r instalación de paquetes}
+install.packages("haven")
+```
+
+```{r cargue de librerias}
+library(haven)
+```
+
+Se cragan los datos de UPersonas
+
+```{r base de datos}
+datos_UPersonas <- read_dta("DATOS/UPersonas.dta")
+View(datos_UPersonas)
+dim(datos_UPersonas)
+
+```
+```{r}
+attach(datos_UPersonas)
+names(datos_UPersonas)
+```
+```{r}
+datos_UPersonas$ano
+```
+
+
+A continuación se crea una base de datos con las variables que se usaran a lo largo del proyecto
+
+```{r}
+subset_UPersonas<-subset(datos_UPersonas, 
+                         select = c(edad, sexo, afilia_cual, no_afiliado, cotizando, rzn_nocotiza, cotiza_cual, ceguera,
+                                    sordera, mudez, dif_moverse, dif_banarse, dif_calle, dif_aprender, hospitalizado,
+                                    ultima_hosp, ult_hosp_cual, ult_hosp_dias, hijos_hombres, hijas_mujeres, mes_hijo1h, 
+                                    mes_hijo2h, mes_hijo3h, mes_hijo4h, mes_hijo5h, mes_hijo6h, mes_hijo7h, mes_hijo1m, 
+                                    mes_hijo2m, mes_hijo3m, mes_hijo4m, mes_hijo5m, mes_hijo6m, mes_hijo7m, 
+                                    ano_hijo1h, ano_hijo2h, ano_hijo3h, ano_hijo4h, ano_hijo5h, ano_hijo6h, ano_hijo7h, 
+                                    ano_hijo1m, ano_hijo2m, ano_hijo3m, ano_hijo4m, ano_hijo5m, ano_hijo6m, ano_hijo7m, 
+                                    edad_thijo, planeo_embarazo, estudia, t_dejoestudio, razon_noestudia, noestudia_cual, 
+                                    nivel_educ, actividad_ppal, es_ptrabajo, descripcion_ciiu, descrip_oficio, 
+                                    medio_consiguio, tipo_contrato, segsoc_salud, seg_medico, afiliacion_fp, vacaciones, 
+                                    prima_navidad, cesantias, ocupacion, rango_ingreso, vr_salario, razon_tiene_negocio, 
+                                    razon_tn_cual, n_empleados, horas_normal, diligencias4, diligencias12, primer_busca, 
+                                    ofertas_empleo, ofertas_emp12, ofertas_emp1, vr_salario_ofr, salario_insf,
+                                    disponibilidad, t_bustrab_a, medio_busco, medio_busco_cual, t_trabajo_ult,
+                                    actividad_principal,t_busco_trab, razon_dejo_bus, razon_db_cual, razon_dejo_trab,
+                                    migra_ult3))
+UPersonas<-as.data.frame(subset_UPersonas)
+dim(UPersonas)
+head(UPersonas)
+```
+
+
+#Control operativo
+2b	parentesco / No registra la pregunta 2b del formulario, pero se puede usar esta variable
+2c	edad
+2d	sexo
+
+```{r}
+
+```
+
+#Seguridad social
+
+101	No esta registrada la variable	
+102	afilia_cual	
+103	no_afiliado	
+106	cotizando	
+107	rzn_nocotiza	
+    cotiza_cual
+109	ceguera
+    sordera
+    mudez
+    dif_moverse
+    dif_banarse
+    dif_calle
+    dif_aprender
+114	hospitalizado	
+116	ultima_hosp	
+    ult_hosp_cual
+117	ult_hosp_dias	
+```{r}
+
+```
+
+
+#Enfermedades cronicas	
+NOta: las variables mes_hijo#m y mes_hijo#h que aparecen en el diccionario, en la base de datos aparecen como mes_hijo1h, ..., mes_hijo7h; y de igual forma para las variables ano_hijo#m y ano_hijo#h,
+
+303a	hijos_hombres
+303b	hijas_mujeres
+304	mes_hijo1h
+  mes_hijo2h
+  mes_hijo3h
+  mes_hijo4h
+  mes_hijo5h
+  mes_hijo6h
+  mes_hijo7h
+    ano_hijo2h
+305	mes_hijo#m
+    ano_hijo#m
+307	edad_thijo
+311	planeo_embarazo
+```{r}
+
+```
+
+
+
+#Educacion	
+402	estudia	
+404	t_dejoestudio	
+405	razon_noestudia	
+    noestudia_cual
+406	nivel_educ	
+
+```{r}
+
+```
+
+
+
+#Fuerza trabajo
+
+501	actividad_ppal
+
+Poblacion ocupada:
+502a	es_ptrabajo	
+502	descripcion_ciiu	
+503	descrip_oficio	
+505	medio_consiguio	
+506	tipo_contrato	
+507	segsoc_salud
+    seg_medico
+    afiliacion_fp
+    vacaciones
+    prima_navidad
+    cesantias	
+508	ocupacion	
+509	rango_ingreso	
+511	vr_salario	
+521	razon_tiene_negocio	
+    razon_tn_cual
+522	n_empleados	
+523	horas_normal	
+
+```{r}
+
+```
+
+
+
+poblacion desocupada:
+
+524	diligencias4	
+525	diligencias12	
+526a	primer_busca	
+526	ofertas_empleo	
+527a	ofertas_emp12	
+527b	ofertas_emp1	
+528	vr_salario_ofr	
+529	salario_insf	
+530	disponibilidad	
+531	t_bustrab_a	
+532	medio_busco	
+    medio_busco_cual
+533	t_trabajo_ult	
+534	actividad_principal	
+535	t_busco_trab	
+536	razon_dejo_bus	
+    razon_db_cual
+538	razon_dejo_trab	
+
+```{r}
+
+```
+
+
+
+Migracion		
+905	migra_ult3
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,146 @@
+---
+  title: "Proyecto ELCA Datos Uhogar"
+output: statsr:::statswithr_lab
+runtime: shiny
+---
+  ```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r Borrado elementos espacio de trabajo , include=FALSE}
+# Borrar los objetos en el espacio de trabajo
+rm(list=ls())
+#ls()
+```
+
+Una vez que el paquete "haven" está cargado, se puede utilizar la función "read_dta()" para leer el archivo .dta. 
+```{r instalación de paquetes}
+install.packages("haven")
+```
+
+```{r cargue de librerias}
+library(haven)
+```
+
+Se cargan los datos de Uhogar
+
+```{r base de datos}
+datos_Uhogar <- read_dta("DATOS/Uhogar.dta")
+View(datos_Uhogar)
+dim(datos_Uhogar)
+attach(datos_Uhogar)
+```
+
+```{r}
+names(Uhogar)
+```
+
+A continuación se crea una base de datos con las variables que se usaran a lo largo del proyecto
+
+```{r}
+subset_Uhogar<-subset(datos_Uhogar, 
+               select = c(n_internet, sp_estrato, tenencia_vivienda, valor_arriendo_pagado, religion, religion1,
+                          n_microondas, n_calentadores, n_duchas, n_aire_acondicionado, n_televisores, n_radios,
+                          n_equipos_sonido, n_equipos_video, n_computadores, n_celular, motocicletas, automoviles, 
+                          transporte, n_bicicletas, lotes, casas, equip_oficina, equip_maq, semovientes, otro_bien_cual, 
+                          n_otros_bienes, ing_trabajo, vr_gtos_mensuales, vr_gtos_mens_alim, retpag_pub, retpag_pub_vr,
+                          retpag_salud, retpag_sal_vr, retpag_educ, retpag_edu_vr, retpag_arren, retpag_arr_vr, 
+                          retpag_almac, retpag_alm_vr, retpag_compra, retpag_cmp_vr, retpag_tend, retpag_ten_vr,
+                          retpag_efinan, retpag_efi_vr, retpag_otro, retpag_otro_cual, retpag_otr_vr))
+Uhogar<-as.data.frame(subset_Uhogar)
+dim(Uhogar)
+head(Uhogar)
+```
+
+#Características de la vivienda actual
+Variables: 
+104	n_internet
+105	sp_estrato
+116	tenencia_vivienda
+119	valor_arriendo_pagado
+120	religion
+121	religion1
+
+
+```{r}
+
+```
+
+#Bienes y servicios e ingresos del hogar
+
+301:
+n_microondas
+n_calentadores
+n_duchas
+n_aire_acondicionado
+n_televisores
+n_radios
+n_equipos_sonido
+n_equipos_video
+n_computadores
+n_celular
+
+
+302:
+motocicletas
+automoviles
+transporte
+n_bicicletas
+lotes
+casas
+equip_oficina
+equip_maq
+semovientes
+otro_bien_cual
+n_otros_bienes
+
+317:
+ing_trabajo
+
+```{r}
+
+```
+
+Gastos del hogar
+405	No esta registrada la variable
+406	vr_gtos_mensuales
+407	vr_gtos_mens_alim
+
+
+```{r}
+
+```
+
+Deudas del hogar
+
+523:
+retpag_pub
+retpag_pub_vr
+retpag_salud
+retpag_sal_vr
+retpag_educ
+retpag_edu_vr
+retpag_arren
+retpag_arr_vr
+retpag_almac
+retpag_alm_vr
+retpag_compra
+retpag_cmp_vr
+retpag_tend
+retpag_ten_vr
+retpag_efinan
+retpag_efi_vr
+retpag_otro
+retpag_otro_cual
+retpag_otr_vr
+
+
+```{r}
+
+```
+
+Eventos que desestabilizaron al hogar durante los últimos 3 años 
+601		No esta registrada la variable
+602		No esta registrada la variable
+603		No esta registrada la variable
+

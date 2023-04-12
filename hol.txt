@@ -1,8 +1,0 @@
-hol
-Valeria Hernandez Gonzale
-<<<<<<< HEAD
-Estudiante de estadistica
-=======
-Estudiante de estadistica
-Edad 26 años
->>>>>>> 90db35bc97d7fb1364284f2f0f72e245489f4e89
