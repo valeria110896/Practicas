@@ -1,0 +1,75 @@
+- **Justicia de género:  **En muchos países, las mujeres han enfrentado históricamente barreras y discriminación en el mercado laboral, lo que ha limitado su capacidad de acceso a oportunidades económicas. Al entender cómo la situación laboral de las mujeres afecta su bienestar y el de sus familias, podemos promover una mayor igualdad de género y oportunidades laborales para las mujeres.      
+- La maternidad y paternidad es un factor importante que puede influir en la situación laboral de las mujeres, ya que puede limitar su disponibilidad para trabajar o estudiar, afectar su acceso a servicios de cuidado infantil y su capacidad para negociar términos laborales flexibles. El objetivo de este estudio es analizar cómo la maternidad y otros factores sociodemográficos están relacionados con la situación laboral de las mujeres en el contexto urbano.
+- Objetivos del estudio:
+    - Identificar las características sociodemográficas de mujeres y hombres con hijos/as y comparar su situación laboral y educativa.
+    - Explorar la relación entre el número y edad de los hijos/as y la situación laboral de mujeres y hombres.
+    - Analizar cómo la disponibilidad de servicios de cuidado infantil y el apoyo familiar influyen en la situación laboral de mujeres y hombres con hijos/as.
+    - Evaluar la relación entre el acceso a permisos parentales remunerados y la situación laboral de mujeres y hombres con hijos/as.
+    - Comparar la situación laboral y educativa de mujeres y hombres con hijos/as, y explorar las posibles causas de las diferencias encontradas.
+    - Analizar la relación entre la paternidad y la situación laboral de los hombres, y la maternidad y la situación laboral de las mujeres, y explorar cómo estas relaciones difieren entre sí.
+- Control operativo
+- 
+- Variables activas
+- Control operativo
+    - Variable:  -  parentesco  
+- Edad de la mujer
+    - Base de datos:     Personas
+    - Variable:       2c  -  edad
+        -  __Edad en años cumplidos:__ 
+- Número de hijos
+    - Base de datos:       Personas
+    - Variable:    303 -   hijos_hombres ,   hijas_mujeres  
+        -  __Cuántos hijos(as) nacidos(as) vivos tiene, o ha tenido__________?__ 
+- Edad de los hijos
+    - Base de datos:       Personas
+        - Variable:    304-305 ,   mes_hijo#h ,   ano_hijo#h ,   mes_hijo#m ,   ano_hijo#m  
+            -  __En qué fecha nacieron los hijos? (a. Mes b. Año)__ 
+- Estado de embarazo
+    - Base de datos:    Persona
+    - Variable 309 -   embarazada
+        -  ________________ está embarazada actualmente?
+- Nivel educativo de la mujer
+    - Base de datos:    Personas
+    - Variable 406 -  nivel_educ  
+        - ![](https://remnote-user-data.s3.amazonaws.com/R_MtJSkHi2h6ZVMcUwMn7gwhjZidUWN6EH1s2IyD4NlmS18DBP795sTNxIjKewOQmMwpmJoUdIkdRwdcvpEPQ4PX72iVbKhaLc7d-hTQD7egwuQ1m-TkAri5c6zxliX7.png) 
+- Situación laboral (  Ocupada, desocupada, inactivas)
+    - Base de datos: Personas 
+    - Variable 501- actividad_ppal
+- Tiempo de trabajo
+    - Base de datos:    Personas
+    - Variable:          520, 521(Para población ocupada) -     horas_normal#    ,   horas_dia#  
+        - ¿Cuántas horas a la semana labora normalmente en ese trabajo?    
+        - EN UN DÍA, ¿_______cuántas horas le dedica a ese  trabajo o empleo?  
+- Primer trabajo?
+    - Base de datos: Persons
+    - Variable 503 -    es_ptrabajo  
+        - Es su trabajo actual, su primer trabajo?  
+            - Si - No
+- Tipo trabajo
+    - Base de datos: Persona (Poblacion inactiva)
+    - Variable 506,  510, -   descrip_activ#  ,   ocupacion#  
+        - ¿A qué sector económico corresponde esta actividad?  
+        - ![](https://remnote-user-data.s3.amazonaws.com/QIZnpUOSbGislfOd0ENt-lS6F6B5-7Vm8F5XT_n4554O_XH7rYiSQdSmoyi5PrRxUtU8egmFnP_yB3a_UVcYZYSaCwnouARCTHruYsvKM8amYuCVMMr7Zec0i2Hgb4CU.png) 
+        - ¿Cuál es la actividad principal de __________?
+            - ![](https://remnote-user-data.s3.amazonaws.com/d6ToWSFJj8RXATOjtjITPBahxsq2e24yjhvTX63ts2BNdklYlCb535tIvrVLi9hVMPlJrWpHmYNzl-4UKNxemiiC36d5EMJqSfhIir8Dw8zIiELZaugOj0VQmVkwhvvL.png) 
+- Tiempo de búsqueda de Trabajo
+    - Base de datos:    Persona
+    - Variable: 522, 523, 523a ‒      jornalero,     busco_trabajo ,   es_buscatrabajo  
+        - Durante los ÚLTIMOS 12 MESES, ¿______buscó trabajo como jornalero o peón?  
+        - Durante los ÚLTIMOS 12 MESES, ¿______buscó trabajo en otro tipo de trabajo o  empleo (diferente a jornalero o peón)?  
+        - Es esta la primera vez que busca trabajo?   
+        - 
+- Implementación del tiempo
+    - Base de datos: Personas
+        - Variables 601, 603 -   cr_actv_ma#  ,   cr_actv_ta#  
+            - ![](https://remnote-user-data.s3.amazonaws.com/10xfnf04MPQJtDRjCKQN-3WP1DMzTfHiBiIpnu3c46oKcxdbWZq9DU2lPRrqniC2yGhUFyRG7wAY812xuk10ah7ZdystnAcch9MPN3fdGMtjN0JISDdQ-S7wpuRfoPns.png) 
+- Variables ilustrativas
+- Sexo
+- Estado civil
+- Ingreso
+- Ahorro
+- Edad madre cuando tuvo primer hijo
+- Tiempo que no estudia
+- Por que dejo de estudiar
+- En que jornada se encuentra estudiando
+- En que nivel se encuentra estudiando
